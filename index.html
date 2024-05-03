@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio de Proyec</title>
+  <!-- Bootstrap CSS CDN -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src=./main.js></script>
+    <!-- CSS personalizado -->
+  
+</head>
+    <style>
+        /* Estñilos adicionales personalizados */
+    .project-card {
+      margin-bottom: 20px;
+    }
+        /* Estilo para el navbar fijo */
+        .navbar.navbar-expand-lg {
+            position: fixed;
+		padding:2vw;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+        }
+    
+        /* Estilo para el navbar transparente */
+        .navbar.navbar-expand-lg.transparent {
+            background-color: transparent !important;
+            box-shadow: none !important;
+        }
+    
+        /* Estilo para el navbar cuando se hace scroll */
+        .navbar.navbar-expand-lg.scrolled {
+            background-color: rgba(0, 1, 0, 0.2) !important; /* Ajusta la opacidad según tu preferencia */
+        }
+        #sobre-mi{
+            margin: 10vw;
+
+    }
+    .btn-primary{
+
+        margin-bottom: 20px;
+        width: 48.5vw;
+    }
+
+    </style>
+    
+    <script>
+        // Script para el efecto de transparencia en el navbar al hacer scroll
+        window.addEventListener('scroll', function() {
+            var navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    
+
+
+        
+    </script>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark bg-opacity-50" id="mainNav">
+        <!-- Contenido de la barra de navegación -->
+        <a class="navbar-brand" href="#">Mi Portafolio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#sobre-mi">Sobre Mí</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#portafolio">Portafolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contacto">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sobre Mí -->
+    <section id="sobre-mi" class="bg-gradient-dark py-5">
+        <!-- Contenido de la sección Sobre Mí -->
+        <div class="container about">
+            <h2 class="text-center mb-4" id="aboutTitle">Sobre Mí</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>¡Hola! Soy John Alejandro Miranda</h3>
+                    <p>¡Bienvenido a mi portafolio! Soy un desarrollador web apasionado por crear experiencias digitales increíbles.</p>
+                    <!-- agrega información acera de tu perfil profesional (lo que eres o esperas ser) -->
+
+                    <!-- Agrega el enlace de descarga de la hoja de vida con un ícono -->
+                    <a href="./assets/Copia_de_Curriculum_ingles" download>
+                        <i class="fa fa-download"></i> Descargar Hoja de Vida
+                    </a>
+                </div>
+                <div class="col-md-4">                    
+                    <img src="./assets/yo.jpg" alt="Imagen de Perfil" class="img-fluid rounded-circle">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portafolio -->
+    <section id="portafolio" class="py-5 bg-light">
+        <!-- Contenido de la sección Portafolio -->
+        <div class="container">
+            <h2 class="text-center mb-4">Portafolio</h2>
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Proyecto 1 -->
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card h-100">
+                                    <img src="./assets/calculadora.png" class="card-img-top" alt="Proyecto 1">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Calculadora</h5>
+                                        <p class="card-text">Se realiza un calculador de notas por porcentajes basado en los creditos de cada asignatura dada y por ultimo un promedio de semestre.</p>
+                                        <a href="http://">Ver más</a>
+                                    </div>
+                                </div>
+                            </div>
+                         
+                            <div class="col-md-4">
+                                <div class="card h-100">
+                                    <img src="./assets/biblioteca.jpg" class="card-img-top" alt="Proyecto 2">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Biblioteca</h5>
+                                        <p class="card-text">Para gestionar un sistema bibliotecario, se implementa una interfaz con la que se podra ingresar y actualizar informacion de los libros disponibles.</p>
+                                        <a href="http://">Ver más</a>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                            <div class="col-md-4">
+                                <div class="card h-100">
+                                    <img src="./assets/BasedeDatos.png" class="card-img-top" alt="Proyecto 3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Base de datos</h5>
+                                        <p class="card-text">se crea base de datos en SQL server con el fin de alimentar la aplicacion Biblioteca.</p>
+                                        <a href="http://">Ver más</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Añade más proyectos aquí -->
+                        </div>
+                    </div>
+                    
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Anterior</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Siguiente</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+ <!-- Formulario de contacto -->
+ <div class="row mt-5">
+    <div class="col-md-6 offset-md-3">
+      <h2 class="text-center mb-4">Contacto</h2>
+      <form class="formcontact">
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="nombre" name="nombre" required>
+        </div>
+        <div class="mb-3">
+          <label for="correo" class="form-label">Correo electrónico</label>
+          <input type="email" class="form-control" id="correo" name="correo" required>
+        </div>
+        <div class="mb-3">
+          <label for="mensaje" class="form-label">Mensaje</label>
+          <textarea class="form-control" id="mensaje" name="mensaje" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" Onclick="validarFormulario()">Enviar</button>
+      </form>
+    </div>
+  </div>
+<!-- Pie de Página -->
+<footer class="bg-light py-4">
+    <!-- Contenido del pie de página -->
+    <div class="container text-center">
+        <!-- Enlaces de Redes Sociales -->
+        <div class="social-icons text-center">
+            <a href="https://www.linkedin.com/in/john-alejandro-miranda-melguizo-366283145/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:j.miranda869@pascualbravo.edu.co"><i class="far fa-envelope"></i></a>
+            <a href="https://github.com/kiriku22" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+        <!-- Información adicional del pie de página -->
+        <p>&copy; 2024 - Todos los derechos reservados</p>
+    </div>
+</footer>
+<!-- Bootstrap JS y Popper.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
